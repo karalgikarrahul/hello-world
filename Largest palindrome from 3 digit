@@ -1,0 +1,14 @@
+c = []
+for m in range(10000, 100000):
+    for n in range(10000, 100000):
+        a = str(m*n)
+        b = list(a)
+        for x in range(len(b)):
+            if b[x] != b[-x-1]:
+                break
+        else:
+            i = ''
+            for item in range(len(b)):
+                i = i + b[item]
+            c.append(int(i))
+print max(c)
